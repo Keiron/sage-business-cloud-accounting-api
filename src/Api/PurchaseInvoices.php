@@ -11,6 +11,7 @@ class PurchaseInvoices extends AbstractEndpoint
      * Return all purchase invoices.
      *
      * @param array $parameters
+     *
      * @return Page
      *
      * @see https://developer.sage.com/accounting/reference/invoicing-purchases/#operation/getPurchaseInvoices
@@ -25,11 +26,11 @@ class PurchaseInvoices extends AbstractEndpoint
     /**
      * Create a purchase invoice.
      *
-     * @param string $contactId The contact the purchase invoice relates to
-     * @param mixed $date The date of the invoice
-     * @param mixed $dueDate The due date of the invoice
-     * @param array $invoiceLines The invoice lines of the invoice
-     * @param array $additionalAttributes Additional attributes of the invoice schema to add
+     * @param string $contactId            The contact the purchase invoice relates to
+     * @param mixed  $date                 The date of the invoice
+     * @param mixed  $dueDate              The due date of the invoice
+     * @param array  $invoiceLines         The invoice lines of the invoice
+     * @param array  $additionalAttributes Additional attributes of the invoice schema to add
      *
      * @return array
      */
@@ -39,13 +40,12 @@ class PurchaseInvoices extends AbstractEndpoint
         $dueDate,
         array $invoiceLines,
         array $additionalAttributes = []
-    ): array
-    {
-         $attributes = array_merge([
-            'contact_id'    => $contactId,
-            'date'          => $this->castDate($date),
+    ): array {
+        $attributes = array_merge([
+            'contact_id'        => $contactId,
+            'date'              => $this->castDate($date),
             'due_date'          => $this->castDate($dueDate),
-            'invoice_lines' => $invoiceLines,
+            'invoice_lines'     => $invoiceLines,
         ], $additionalAttributes);
 
         return $this->_jsonPost('/purchase_invoices', ['purchase_invoice' => $attributes]);
@@ -55,7 +55,7 @@ class PurchaseInvoices extends AbstractEndpoint
      * Update a purchase invoice.
      *
      * @param string $id
-     * @param array $attributes
+     * @param array  $attributes
      *
      * @return array
      *
@@ -63,14 +63,14 @@ class PurchaseInvoices extends AbstractEndpoint
      */
     public function update(string $id, array $attributes): array
     {
-        return $this->_jsonPut('/purchase_invoices/' . $id, ['purchase_invoice' => $attributes]);
+        return $this->_jsonPut('/purchase_invoices/'.$id, ['purchase_invoice' => $attributes]);
     }
 
     /**
      * Return a purchase invoice.
      *
      * @param string $id
-     * @param array $parameters
+     * @param array  $parameters
      *
      * @return array
      *
@@ -78,7 +78,7 @@ class PurchaseInvoices extends AbstractEndpoint
      */
     public function find(string $id, array $parameters = []): array
     {
-        return $this->_get('/purchase_invoices/' . $id, $parameters);
+        return $this->_get('/purchase_invoices/'.$id, $parameters);
     }
 
     /**
@@ -90,7 +90,7 @@ class PurchaseInvoices extends AbstractEndpoint
      */
     public function delete(string $id): void
     {
-        $this->_delete('/purchase_invoices/' . $id);
+        $this->_delete('/purchase_invoices/'.$id);
     }
 
     /**
@@ -102,6 +102,6 @@ class PurchaseInvoices extends AbstractEndpoint
      */
     public function release(string $id): void
     {
-        $this->_post('/purchase_invoices/' . $id . '/release');
+        $this->_post('/purchase_invoices/'.$id.'/release');
     }
 }
