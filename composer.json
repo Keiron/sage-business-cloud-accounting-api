@@ -1,0 +1,37 @@
+{
+    "name": "olsgreen/sage-business-cloud-accounting-api",
+    "description": "This package provides a means easily of interacting with the Sage Business Cloud Accounting API.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Oliver Green",
+            "email": "green2go@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/Users/olsgreen/GitHub/abstract-api"
+        }
+    ],
+    "require": {
+        "olsgreen/abstract-api": "dev-master"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "mockery/mockery": "^1.3"
+    },
+    "autoload": {
+        "psr-4": {
+          "Olsgreen\\SageBusinessCloud\\Accounting\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+          "Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
