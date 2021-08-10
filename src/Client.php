@@ -8,6 +8,7 @@ use Olsgreen\SageBusinessCloud\Accounting\Api\BankAccounts;
 use Olsgreen\SageBusinessCloud\Accounting\Api\ChartOfAccounts\LedgerAccounts;
 use Olsgreen\SageBusinessCloud\Accounting\Api\ContactPayments;
 use Olsgreen\SageBusinessCloud\Accounting\Api\Contacts;
+use Olsgreen\SageBusinessCloud\Accounting\Api\Journals;
 use Olsgreen\SageBusinessCloud\Accounting\Api\PaymentMethods;
 use Olsgreen\SageBusinessCloud\Accounting\Api\SalesInvoices;
 use Olsgreen\SageBusinessCloud\Accounting\Api\TaxRates;
@@ -51,9 +52,9 @@ class Client extends AbstractClient
         return new ContactPayments($this);
     }
 
-    public function salesInvoices(): SalesInvoices
+    public function journals(): Journals
     {
-        return new SalesInvoices($this);
+        return new Journals($this);
     }
 
     public function ledgerAccounts(): LedgerAccounts
@@ -64,6 +65,11 @@ class Client extends AbstractClient
     public function paymentMethods(): PaymentMethods
     {
         return new PaymentMethods($this);
+    }
+
+    public function salesInvoices(): SalesInvoices
+    {
+        return new SalesInvoices($this);
     }
 
     public function taxRates(): TaxRates
