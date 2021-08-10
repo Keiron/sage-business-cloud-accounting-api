@@ -1,6 +1,6 @@
 <?php
 
-namespace Olsgreen\SageBusinessCloud\Accounting\Api\ChartOfAccounts;
+namespace Olsgreen\SageBusinessCloud\Accounting\Api;
 
 use Olsgreen\SageBusinessCloud\Accounting\AbstractEndpoint;
 use Olsgreen\SageBusinessCloud\Accounting\Page;
