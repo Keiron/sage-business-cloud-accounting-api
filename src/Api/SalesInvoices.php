@@ -102,7 +102,7 @@ class SalesInvoices extends AbstractEndpoint
     }
 
     /**
-     * Release a sales invoice.
+     * Release a draft sales invoice.
      *
      * @param string $id The Sales Invoice Key.
      *

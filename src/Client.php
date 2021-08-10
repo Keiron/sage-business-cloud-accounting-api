@@ -5,11 +5,12 @@ namespace Olsgreen\SageBusinessCloud\Accounting;
 use Olsgreen\AbstractApi\AbstractClient;
 use Olsgreen\AbstractApi\ManagesHttpAccessTokens;
 use Olsgreen\SageBusinessCloud\Accounting\Api\BankAccounts;
-use Olsgreen\SageBusinessCloud\Accounting\Api\ChartOfAccounts\LedgerAccounts;
 use Olsgreen\SageBusinessCloud\Accounting\Api\ContactPayments;
 use Olsgreen\SageBusinessCloud\Accounting\Api\Contacts;
 use Olsgreen\SageBusinessCloud\Accounting\Api\Journals;
+use Olsgreen\SageBusinessCloud\Accounting\Api\LedgerAccounts;
 use Olsgreen\SageBusinessCloud\Accounting\Api\PaymentMethods;
+use Olsgreen\SageBusinessCloud\Accounting\Api\PurchaseInvoices;
 use Olsgreen\SageBusinessCloud\Accounting\Api\SalesInvoices;
 use Olsgreen\SageBusinessCloud\Accounting\Api\TaxRates;
 use Olsgreen\SageBusinessCloud\Accounting\Api\TransactionTypes;
@@ -65,6 +66,11 @@ class Client extends AbstractClient
     public function paymentMethods(): PaymentMethods
     {
         return new PaymentMethods($this);
+    }
+
+    public function purchaseInvoices(): PurchaseInvoices
+    {
+        return new PurchaseInvoices($this);
     }
 
     public function salesInvoices(): SalesInvoices
