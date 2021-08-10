@@ -14,6 +14,6 @@ trait DecodesResponseBodies
 
         $truncatedBody = substr((string) $response->getBody(), 0, 100);
 
-        throw new \Exception('Could not decode body: ' . $truncatedBody);
+        throw new \Exception('Could not decode body: '.$truncatedBody);
     }
 }

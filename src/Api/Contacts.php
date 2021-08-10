@@ -12,23 +12,25 @@ class Contacts extends AbstractEndpoint
      * Return all contacts.
      *
      * @param array $parameters Query parameters
+     *
      * @return Page
      *
      * @see https://developer.sage.com/api/accounting/api/contacts/#operation/getContacts
      */
     public function all(array $parameters = []): Page
     {
-       return $this->createPage(
-           $this->_get('/contacts', $parameters)
-       );
+        return $this->createPage(
+            $this->_get('/contacts', $parameters)
+        );
     }
 
     /**
-     * Creates a contact
+     * Creates a contact.
      *
-     * @param string $name The contact's full name or business name
-     * @param array<string> $contactTypeIds The IDs of the Contact Types.
-     * @param array $additionalAttributes Additional attributes of the contact schema to add
+     * @param string        $name                 The contact's full name or business name
+     * @param array<string> $contactTypeIds       The IDs of the Contact Types.
+     * @param array         $additionalAttributes Additional attributes of the contact schema to add
+     *
      * @return array
      *
      * @see https://developer.sage.com/accounting/reference/contacts/#operation/postContacts
@@ -36,7 +38,7 @@ class Contacts extends AbstractEndpoint
     public function create(string $name, array $contactTypeIds, array $additionalAttributes = []): array
     {
         $attributes = array_merge([
-            'name' => $name,
+            'name'             => $name,
             'contact_type_ids' => $contactTypeIds,
         ], $additionalAttributes);
 
@@ -46,30 +48,33 @@ class Contacts extends AbstractEndpoint
     /**
      * Update a contact.
      *
-     * @param string $id The Contact Key.
-     * @param array $attributes Attributes of the contacts schema to update
-     * @return array
+     * @param string $id         The Contact Key.
+     * @param array  $attributes Attributes of the contacts schema to update
+     *
      * @throws JsonEncodingException
+     *
+     * @return array
      *
      * @see https://developer.sage.com/accounting/reference/contacts/#operation/putContactsKey
      */
     public function update(string $id, array $attributes): array
     {
-        return $this->_jsonPut('/contacts/' . $id, $attributes);
+        return $this->_jsonPut('/contacts/'.$id, $attributes);
     }
 
     /**
      * Return a contact.
      *
-     * @param string $id The Contact Key.
-     * @param array $parameters Query parameters
+     * @param string $id         The Contact Key.
+     * @param array  $parameters Query parameters
+     *
      * @return array
      *
      * @see https://developer.sage.com/accounting/reference/contacts/#operation/getContactsKey
      */
-    public function find(string $id, array $parameters = []):? array
+    public function find(string $id, array $parameters = []): ?array
     {
-        return $this->_get('/contacts/' . $id, $parameters);
+        return $this->_get('/contacts/'.$id, $parameters);
     }
 
     /**
@@ -81,13 +86,14 @@ class Contacts extends AbstractEndpoint
      */
     public function delete(string $id)
     {
-        return $this->_delete('/contacts/' . $id);
+        return $this->_delete('/contacts/'.$id);
     }
 
     /**
      * Returns all contact types.
      *
      * @param array $parameters
+     *
      * @return Page
      *
      * @see https://developer.sage.com/accounting/reference/contacts/#operation/getContactTypes
@@ -100,9 +106,10 @@ class Contacts extends AbstractEndpoint
     }
 
     /**
-     * Returns all countries
+     * Returns all countries.
      *
      * @param array $parameters
+     *
      * @return Page
      *
      * @see https://developer.sage.com/accounting/reference/contacts/#operation/getCountries

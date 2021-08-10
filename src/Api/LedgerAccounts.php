@@ -11,6 +11,7 @@ class LedgerAccounts extends AbstractEndpoint
      * Return all ledger accounts.
      *
      * @param array $parameters
+     *
      * @return Page
      *
      * @see https://developer.sage.com/accounting/reference/accounting-setup/#operation/getLedgerAccounts

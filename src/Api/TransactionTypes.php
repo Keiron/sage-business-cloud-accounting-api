@@ -11,6 +11,7 @@ class TransactionTypes extends AbstractEndpoint
      * Return all transaction types.
      *
      * @param array $parameters
+     *
      * @return Page
      *
      * @see https://developer.sage.com/accounting/reference/accounting/#tag/Transaction-Types

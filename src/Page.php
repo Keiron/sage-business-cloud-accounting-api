@@ -21,10 +21,14 @@ class Page extends AbstractEndpoint
     protected $items;
 
     public function __construct(
-        Client $client, array $items, $totalItems, $currentPage,
-        $itemsPerPage, $nextUrl, $previousUrl
-    )
-    {
+        Client $client,
+        array $items,
+        $totalItems,
+        $currentPage,
+        $itemsPerPage,
+        $nextUrl,
+        $previousUrl
+    ) {
         $this->items = $items;
 
         $this->totalItems = intval($totalItems);
@@ -90,7 +94,7 @@ class Page extends AbstractEndpoint
         return empty($this->nextUrl);
     }
 
-    public function nextPage():? self
+    public function nextPage(): ?self
     {
         if ($this->nextUrl) {
             [$path, $parameters] = $this->parsePath($this->nextUrl);
@@ -101,7 +105,7 @@ class Page extends AbstractEndpoint
         return null;
     }
 
-    public function previousPage():? self
+    public function previousPage(): ?self
     {
         if ($this->previousUrl) {
             [$path, $parameters] = $this->parsePath($this->previousUrl);
@@ -124,13 +128,13 @@ class Page extends AbstractEndpoint
     public function toArray(): array
     {
         return [
-            'totalItems' => $this->totalItems,
+            'totalItems'   => $this->totalItems,
             'itemsPerPage' => $this->itemsPerPage,
-            'currentPage' => $this->currentPage,
-            'totalPages' => $this->totalPages,
-            'nextUrl' => $this->nextUrl,
-            'previousUrl' => $this->previousUrl,
-            'items' => $this->items,
+            'currentPage'  => $this->currentPage,
+            'totalPages'   => $this->totalPages,
+            'nextUrl'      => $this->nextUrl,
+            'previousUrl'  => $this->previousUrl,
+            'items'        => $this->items,
         ];
     }
 }
