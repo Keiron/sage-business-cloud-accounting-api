@@ -4,17 +4,12 @@ namespace Olsgreen\SageBusinessCloud\Accounting;
 
 use Olsgreen\AbstractApi\AbstractClient;
 use Olsgreen\AbstractApi\ManagesHttpAccessTokens;
-use Olsgreen\SageBusinessCloud\Accounting\Api\Authentication;
 use Olsgreen\SageBusinessCloud\Accounting\Api\BankAccounts;
-use Olsgreen\SageBusinessCloud\Accounting\Api\ChartOfAccounts;
 use Olsgreen\SageBusinessCloud\Accounting\Api\ChartOfAccounts\LedgerAccounts;
 use Olsgreen\SageBusinessCloud\Accounting\Api\ContactPayments;
 use Olsgreen\SageBusinessCloud\Accounting\Api\Contacts;
-use Olsgreen\SageBusinessCloud\Accounting\Api\Invoices;
 use Olsgreen\SageBusinessCloud\Accounting\Api\PaymentMethods;
 use Olsgreen\SageBusinessCloud\Accounting\Api\SalesInvoices;
-use Olsgreen\SageBusinessCloud\Accounting\Api\SalesTransactions;
-use Olsgreen\SageBusinessCloud\Accounting\Api\Taxes;
 use Olsgreen\SageBusinessCloud\Accounting\Api\TaxRates;
 use Olsgreen\SageBusinessCloud\Accounting\Api\TransactionTypes;
 use Olsgreen\SageBusinessCloud\Accounting\Api\User;

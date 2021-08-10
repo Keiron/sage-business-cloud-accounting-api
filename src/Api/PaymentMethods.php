@@ -11,6 +11,7 @@ class PaymentMethods extends AbstractEndpoint
      * Return all payment methods.
      *
      * @param array $parameters Query parameters
+     *
      * @return Page
      */
     public function all(array $parameters = []): Page

@@ -13,6 +13,5 @@ class User extends AbstractEndpoint
 
     public function update($request)
     {
-
     }
 }

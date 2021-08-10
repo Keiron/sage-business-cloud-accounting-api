@@ -21,7 +21,8 @@ class AbstractEndpoint extends \Olsgreen\AbstractApi\AbstractEndpoint
     protected function createPage(array $response): Page
     {
         return Page::createFromResponseArray(
-            $this->client, $response
+            $this->client,
+            $response
         );
     }
 

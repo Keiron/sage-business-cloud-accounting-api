@@ -11,6 +11,7 @@ class TaxRates extends AbstractEndpoint
      * Return all tax rates.
      *
      * @param array $parameters
+     *
      * @return Page
      *
      * @see https://developer.sage.com/accounting/reference/taxes/#operation/getTaxRates

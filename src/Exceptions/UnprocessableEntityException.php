@@ -18,7 +18,7 @@ class UnprocessableEntityException extends \Olsgreen\AbstractApi\Http\Exceptions
         $body = $this->decodeResponseBody($response);
 
         if (!empty($body)) {
-            $message .= PHP_EOL . 'The following errors were returned:';
+            $message .= PHP_EOL.'The following errors were returned:';
 
             // Errors are returned as an array within the response
             // body in the following format:
@@ -33,11 +33,11 @@ class UnprocessableEntityException extends \Olsgreen\AbstractApi\Http\Exceptions
                 $error['friendlyErrorMessage'] = $error['$message'];
 
                 if ($error['$dataCode'] === 'RecordInvalid' && $error['$source'] !== 'base') {
-                    $error['friendlyErrorMessage'] .= ' (' . $error['$source'] . ')';
+                    $error['friendlyErrorMessage'] .= ' ('.$error['$source'].')';
                 }
 
                 $this->errors[] = $error;
-                $message .= PHP_EOL . '- ' . $error['friendlyErrorMessage'];
+                $message .= PHP_EOL.'- '.$error['friendlyErrorMessage'];
             }
         }
 

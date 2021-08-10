@@ -11,6 +11,7 @@ class BankAccounts extends AbstractEndpoint
      * Return all bank accounts.
      *
      * @param array $parameters Query parameters
+     *
      * @return Page
      *
      * @see https://developer.sage.com/accounting/reference/banking/#operation/getBankAccounts
