@@ -36,3 +36,41 @@ You can handle authentication and obtain an access token by using my other packa
     //     ...
     // ]
 ```
+
+## Endpoint Support
+
+Sage Business Cloud Accounting has numerous endpoints, we have only implemented a limited number so far:    
+
+✅ Contacts
+
+✅ Contact Payments
+
+✅ Contact Types
+
+✅ Countries
+
+✅ Sales Invoices
+
+✅ Purchase Invoices
+
+✅ Transaction Types
+
+✅ Tax Rates
+
+✅ Journals
+
+➖ Ledger Accounts
+
+➖ Bank Accounts
+
+➖ User
+
+See the [API Reference](https://developer.sage.com/accounting/reference/) for a full list.
+
+# License
+
+See attached license file
+
+# Contributions
+
+Pull requests welcome 🙂
