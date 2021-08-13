@@ -5,6 +5,7 @@ namespace Olsgreen\SageBusinessCloud\Accounting;
 use Olsgreen\AbstractApi\AbstractClient;
 use Olsgreen\AbstractApi\ManagesHttpAccessTokens;
 use Olsgreen\SageBusinessCloud\Accounting\Api\BankAccounts;
+use Olsgreen\SageBusinessCloud\Accounting\Api\ContactAllocations;
 use Olsgreen\SageBusinessCloud\Accounting\Api\ContactPayments;
 use Olsgreen\SageBusinessCloud\Accounting\Api\Contacts;
 use Olsgreen\SageBusinessCloud\Accounting\Api\Journals;
@@ -51,6 +52,11 @@ class Client extends AbstractClient
     public function contactPayments(): ContactPayments
     {
         return new ContactPayments($this);
+    }
+
+    public function contactAllocations(): ContactAllocations
+    {
+        return new ContactAllocations($this);
     }
 
     public function journals(): Journals

@@ -44,6 +44,8 @@ Sage Business Cloud Accounting has numerous endpoints, we have only implemented 
 
 ✅ Contact Payments
 
+✅ Contact Allocations
+
 ✅ Contact Types
 
 ✅ Countries
