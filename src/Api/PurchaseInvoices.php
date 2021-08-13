@@ -33,6 +33,8 @@ class PurchaseInvoices extends AbstractEndpoint
      * @param array  $additionalAttributes Additional attributes of the invoice schema to add
      *
      * @return array
+     *
+     * @see https://developer.sage.com/accounting/reference/invoicing-purchases/#operation/postPurchaseInvoices
      */
     public function create(
         string $contactId,
