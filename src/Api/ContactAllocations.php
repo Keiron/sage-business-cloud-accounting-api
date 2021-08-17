@@ -28,8 +28,8 @@ class ContactAllocations extends AbstractEndpoint
      *
      * @param string $transactionTypeId
      * @param string $contactId
-     * @param array $allocatedArtefacts
-     * @param null $date
+     * @param array  $allocatedArtefacts
+     * @param null   $date
      *
      * @return array
      *
@@ -39,9 +39,9 @@ class ContactAllocations extends AbstractEndpoint
     {
         return $this->_jsonPost('/contact_allocations', [
             'transaction_type_id' => $transactionTypeId,
-            'contact_id' => $contactId,
+            'contact_id'          => $contactId,
             'allocated_artefacts' => $allocatedArtefacts,
-            'date' => $this->castDate($date ?? now()),
+            'date'                => $this->castDate($date ?? now()),
         ]);
     }
 
@@ -49,7 +49,7 @@ class ContactAllocations extends AbstractEndpoint
      * Update a contact allocation.
      *
      * @param string $id
-     * @param array $attributes
+     * @param array  $attributes
      *
      * @return array
      *
@@ -57,7 +57,7 @@ class ContactAllocations extends AbstractEndpoint
      */
     public function update(string $id, array $attributes): array
     {
-        return $this->_jsonPut('/contact_allocations/' . $id, $attributes);
+        return $this->_jsonPut('/contact_allocations/'.$id, $attributes);
     }
 
     /**
@@ -71,7 +71,7 @@ class ContactAllocations extends AbstractEndpoint
      */
     public function find(string $id, array $parameters = []): array
     {
-        return $this->_get('/contact_allocations/' . $id);
+        return $this->_get('/contact_allocations/'.$id);
     }
 
     /**
@@ -83,6 +83,6 @@ class ContactAllocations extends AbstractEndpoint
      */
     public function delete(string $id): void
     {
-        $this->_delete('/contact_allocations/' . $id);
+        $this->_delete('/contact_allocations/'.$id);
     }
 }
