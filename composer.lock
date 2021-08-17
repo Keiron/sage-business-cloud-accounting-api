@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "db126da954ccec8e47600f6f2c5ce9c1",
+    "content-hash": "bef61b67383e0bda2c53e8a2c21ca724",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -246,11 +246,17 @@
         },
         {
             "name": "olsgreen/abstract-api",
-            "version": "dev-master",
+            "version": "1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/olsgreen/abstract-api.git",
+                "reference": "d38e0076320691e0f9d63f98b80070d04732d64e"
+            },
             "dist": {
-                "type": "path",
-                "url": "/Users/olsgreen/GitHub/abstract-api",
-                "reference": "584ea47b8e8b6f846dc193ccaf0b0273da21213c"
+                "type": "zip",
+                "url": "https://api.github.com/repos/olsgreen/abstract-api/zipball/d38e0076320691e0f9d63f98b80070d04732d64e",
+                "reference": "d38e0076320691e0f9d63f98b80070d04732d64e",
+                "shasum": ""
             },
             "require": {
                 "ext-fileinfo": "*",
@@ -271,11 +277,7 @@
                     "Olsgreen\\AbstractApi\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -286,9 +288,11 @@
                 }
             ],
             "description": "This package provides a means of easily implementing rich PHP API clients for various services.",
-            "transport-options": {
-                "relative": false
-            }
+            "support": {
+                "issues": "https://github.com/olsgreen/abstract-api/issues",
+                "source": "https://github.com/olsgreen/abstract-api/tree/1.1"
+            },
+            "time": "2021-08-17T20:04:19+00:00"
         },
         {
             "name": "optimus/onion",
@@ -3097,9 +3101,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "olsgreen/abstract-api": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": [],
