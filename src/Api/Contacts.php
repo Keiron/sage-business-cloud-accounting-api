@@ -59,7 +59,7 @@ class Contacts extends AbstractEndpoint
      */
     public function update(string $id, array $attributes): array
     {
-        return $this->_jsonPut('/contacts/'.$id, $attributes);
+        return $this->_jsonPut('/contacts/'.$id, ['contact' => $attributes]);
     }
 
     /**
