@@ -84,9 +84,9 @@ class Contacts extends AbstractEndpoint
      *
      * @see https://developer.sage.com/accounting/reference/contacts/#operation/deleteContactsKey
      */
-    public function delete(string $id)
+    public function delete(string $id): void
     {
-        return $this->_delete('/contacts/'.$id);
+        $this->_delete('/contacts/'.$id);
     }
 
     /**

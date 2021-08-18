@@ -100,10 +100,12 @@ class PurchaseInvoices extends AbstractEndpoint
      *
      * @param string $id
      *
+     * @return array
+     *
      * @see https://developer.sage.com/accounting/reference/invoicing-purchases/#operation/postPurchaseInvoicesKeyRelease
      */
-    public function release(string $id): void
+    public function release(string $id): array
     {
-        $this->_post('/purchase_invoices/'.$id.'/release');
+        return $this->_post('/purchase_invoices/'.$id.'/release');
     }
 }

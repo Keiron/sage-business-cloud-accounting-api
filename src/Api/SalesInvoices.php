@@ -88,9 +88,11 @@ class SalesInvoices extends AbstractEndpoint
      *
      * @param string $id The Sales Invoice Key.
      *
+     * @return array
+     *
      * @see https://developer.sage.com/accounting/reference/invoicing-sales/#operation/deleteSalesInvoicesKey
      */
-    public function void(string $id, string $void_reason): void
+    public function void(string $id, string $void_reason): array
     {
         $parameters = [];
 
@@ -98,7 +100,7 @@ class SalesInvoices extends AbstractEndpoint
             $parameters['void_reason'] = $void_reason;
         }
 
-        $this->_delete('/sales_invoices/'.$id, $parameters);
+        return $this->_delete('/sales_invoices/'.$id, $parameters);
     }
 
     /**
@@ -106,10 +108,12 @@ class SalesInvoices extends AbstractEndpoint
      *
      * @param string $id The Sales Invoice Key.
      *
+     * @return array
+     *
      * @see https://developer.sage.com/accounting/reference/invoicing-sales/#operation/postSalesInvoicesKeyRelease
      */
-    public function release(string $id): void
+    public function release(string $id): array
     {
-        $this->_post('/sales_invoices/'.$id.'/release');
+        return $this->_post('/sales_invoices/'.$id.'/release');
     }
 }
